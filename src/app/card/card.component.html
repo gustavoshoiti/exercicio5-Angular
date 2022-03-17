@@ -1,0 +1,41 @@
+<mat-card class="box-todo">
+    <mat-card-header class="b-header">
+        <h1>ToDo App</h1>
+    </mat-card-header>
+
+    <mat-card-content class="atividade">
+
+        <mat-form-field class="b-atividade" appearance="fill">
+          <mat-label>Adicione uma atividade</mat-label>
+          <input matInput placeholder="Ex: Estudar Algoritmos" #inputAtividade (keyup.enter)="adicionar(inputAtividade.value)">
+        </mat-form-field>
+      
+        <button class="plus" mat-raised-button color="primary" (click)="adicionar(inputAtividade.value)" appBPlus>+</button>
+      
+    </mat-card-content>
+     
+    <mat-list class="a-atividade">
+
+        <mat-list-item 
+            class="b-delete" 
+            *ngFor="let unica of atividades; let elementos = index"
+            >
+            <span>{{ unica }}</span> 
+            <button 
+                appStyleBtn 
+                class="hiddin" 
+                mat-icon-button color="accent" 
+                (click)="remover(unica)"
+            >
+                <mat-icon>delete</mat-icon>
+            </button>
+        </mat-list-item>
+      
+    </mat-list>
+      
+    <mat-card-footer class="box-clear">
+        <p >Você tem {{atividades.length}} tarefas pendentes!</p>
+        <button class="button-b" (click)="removerall()" appTodoDirectiva>Clear All</button>
+    </mat-card-footer>
+    
+</mat-card>

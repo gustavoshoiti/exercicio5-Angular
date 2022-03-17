@@ -1,0 +1,86 @@
+.box-todo{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    min-height: 150px;
+    min-width: 350px;
+}
+.b-header{
+    background-color: aquamarine;
+}
+.atividade{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+.b-atividade{
+    width: 100%;
+}
+
+.plus{
+    margin-left: 8px;
+    height: 49px;
+    font-size: 20px;
+
+}
+
+.a-atividade{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+    border-radius: 20px;
+
+    overflow-y: scroll;
+    max-height: 210px; 
+}
+.b-delete{
+
+    background-color: rgb(240, 240, 240);
+    margin-bottom: 10px;
+    justify-content: left;
+    
+}
+
+.b-delete span{
+    width: 100%;
+}
+
+.hiddin
+{
+    opacity:0.4;
+}
+.hiddin:hover
+{
+    border: 2px solid black;
+    background-color: darkorchid;
+    opacity:5;
+}
+
+
+.box-clear {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: auto; 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+}
+p .button-b{
+    width: 100px;
+}
+p{
+    font-size: 20px;
+}
+.button-b{
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    height: 55px;
+    width: 70px;
+    background-color: cadetblue;
+}
